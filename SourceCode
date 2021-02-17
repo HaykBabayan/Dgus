@@ -2,11 +2,7 @@
 
 SoftwareSerial mySerial(15, 14);
 
-
 int oilsensorpin = A1; //oil sensor pin
-
-
-
 
 void setup()
 {
@@ -20,8 +16,6 @@ void loop()
   int sensor_val_current = analogRead(currentsensorpin) ;  
   sendtodgus( 2 , sensor_val_current);
   
-
- 
 }
 
 
@@ -51,6 +45,4 @@ void sendtodgus(uint16_t addres , float sendingdata){
           mySerial.write(data1);// first data send
           mySerial.write(data2); // second data send
 
-
-  
 }
